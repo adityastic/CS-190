@@ -76,6 +76,15 @@ class MyArrayList{
 		return true; 
 	} 
 
+	public int totalAge() {
+		int sum=0;
+		for(int i=0;i<count;i++) {
+			Node temp=head[i];
+			sum += temp.readage();;
+		}
+		return sum; 
+	}           
+	
 	public String printlist(){
 		Node temp;
 		System.out.println("\nList:");
