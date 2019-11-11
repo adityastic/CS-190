@@ -65,7 +65,17 @@ class MyArrayList{
 		}
 		return cnt; 
 	}  
-	
+
+
+	public  boolean allOlderThan(int a){    
+		for(int i=0;i<count;i++){
+			Node temp=head[i];
+			if(temp.readage() < a)
+				return false;
+		}
+		return true; 
+	} 
+
 	public String printlist(){
 		Node temp;
 		System.out.println("\nList:");
