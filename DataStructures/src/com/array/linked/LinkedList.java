@@ -45,6 +45,16 @@ class MyArrayList{
 		return res; 
 	}    
 
+	public int oldest(){     
+		int oldest=Integer.MIN_VALUE;
+		for(int i=0;i<count;i++){
+			Node temp=head[i];
+			if (temp.readage()>oldest)
+				oldest = temp.readage();
+		}
+		return oldest; 
+	}                 
+
 	public String printlist(){
 		Node temp;
 		System.out.println("\nList:");
