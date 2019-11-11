@@ -55,6 +55,17 @@ class MyArrayList{
 		return oldest; 
 	}                 
 
+
+	public  int count(String s1){  
+		int cnt=0;
+		for(int i=0;i<count;i++) {
+			Node temp=head[i];
+			if(temp.readname().equals(s1))
+				cnt++;
+		}
+		return cnt; 
+	}  
+	
 	public String printlist(){
 		Node temp;
 		System.out.println("\nList:");
