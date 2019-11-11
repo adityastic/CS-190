@@ -84,6 +84,16 @@ class MyArrayList{
 		}
 		return sum; 
 	}           
+
+	public int countEvenAge() {
+		int cnt=0;
+		for(int i=0;i<count;i++) {
+			Node temp=head[i];
+			if(temp.readage() % 2 == 0)
+				cnt++;
+		}
+		return cnt; 
+	}             
 	
 	public String printlist(){
 		Node temp;
