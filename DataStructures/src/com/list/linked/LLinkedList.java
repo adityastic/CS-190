@@ -39,6 +39,7 @@ class LLinkedList{
 		return res  ; 
 	} 
 
+
 	public  int oldest(){    
 		int res=0;
 		LLNode temp=head;
@@ -62,8 +63,13 @@ class LLinkedList{
 	}  
 
 	public  boolean allOlderThan(int a){    
-		boolean res=true;
-		return res; 
+		LLNode temp=head;
+		while(temp!=null) {
+			if (temp.readage() < a)
+				return false;
+			temp=temp.next;
+		}
+		return true; 
 	} 
 
 	public  void insert_last(String s1,int a){    
