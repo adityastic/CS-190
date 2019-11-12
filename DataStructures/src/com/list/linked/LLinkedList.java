@@ -76,17 +76,14 @@ class LLinkedList{
 
 	}
 
-	public String delete_first()
-	{         if (head==null)return null;
-	String res=head.readname();
-	head = head.next;
-	return res;
+	public String delete_first(){         
+		if (head==null)return null;
+		String res=head.readname();
+		head = head.next;
+		return res;
 	}
 
-
-
-	public String printlist()
-	{
+	public String printlist(){
 		LLNode temp=head;
 		String list ="HEAD->";
 		while(temp!=null) {
@@ -97,11 +94,6 @@ class LLinkedList{
 		return list; 
 
 	}
-
-
-
-
-
 }
 
 
