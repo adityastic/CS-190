@@ -3,17 +3,17 @@ package com.list.linked;
 class LLinkedList{
 	private LLNode head;
 
-	public  LLinkedList(){
+	public LLinkedList(){
 		head=null;
 	}
 
-	public  void insert(String s1,int a){     
+	public void insert(String s1,int a){     
 		LLNode temp =new LLNode(s1,a);
 		temp.next=head;
 		head=temp;
 	}
 
-	public  String youngest(){     
+	public String youngest(){     
 		int res=900;
 		String name="BLANK";
 		LLNode temp=head;
@@ -27,7 +27,7 @@ class LLinkedList{
 		return name  ; 
 	}                                              
 
-	public  boolean search(String s1){     
+	public boolean search(String s1){     
 		boolean res=false;
 		LLNode temp=head;
 		while(temp!=null) {
@@ -40,7 +40,7 @@ class LLinkedList{
 	} 
 
 
-	public  int oldest(){    
+	public int oldest(){    
 		int res=0;
 		LLNode temp=head;
 		while(temp!=null) {
@@ -51,7 +51,7 @@ class LLinkedList{
 		return res; 
 	}  
 
-	public  int count(String s1){     
+	public int count(String s1){     
 		int res=0;
 		LLNode temp=head;
 		while(temp!=null) {
@@ -62,7 +62,7 @@ class LLinkedList{
 		return res; 
 	}  
 
-	public  boolean allOlderThan(int a){    
+	public boolean allOlderThan(int a){    
 		LLNode temp=head;
 		while(temp!=null) {
 			if (temp.readage() < a)
@@ -72,7 +72,7 @@ class LLinkedList{
 		return true; 
 	} 
 
-	public  void insert_last(String s1,int a){    
+	public void insert_last(String s1,int a){    
 
 	}
 
