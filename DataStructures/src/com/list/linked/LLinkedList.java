@@ -41,6 +41,12 @@ class LLinkedList{
 
 	public  int oldest(){    
 		int res=0;
+		LLNode temp=head;
+		while(temp!=null) {
+			if (temp.readage()>res)
+				res=temp.readage();
+			temp=temp.next;
+		}
 		return res; 
 	}  
 
@@ -54,18 +60,18 @@ class LLinkedList{
 		return res; 
 	} 
 
-
 	public  void insert_last(String s1,int a){    
 
 	}
 
 	public String delete_first()
-	{        
-		if (head==null)return null;
-		String res=head.readname();
-		head = head.next;
-		return res;
+	{         if (head==null)return null;
+	String res=head.readname();
+	head = head.next;
+	return res;
 	}
+
+
 
 	public String printlist()
 	{
@@ -73,12 +79,17 @@ class LLinkedList{
 		String list ="HEAD->";
 		while(temp!=null) {
 			list +=temp.print();
-			temp=temp.next;
-		}
+			temp=temp.next;}
+
 		list+="NULL";  
 		return list; 
 
 	}
+
+
+
+
+
 }
 
 
