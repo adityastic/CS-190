@@ -75,7 +75,7 @@ class LLMyFrameALL extends JFrame implements ActionListener{
 		Object target=e.getSource();
 
 		if (target==b1){
-			l.insert(t2.getText(), Integer.parseInt(t3.getText()));
+			l.insert_last(t2.getText(), Integer.parseInt(t3.getText()));
 			display();}
 		if (target==b2){
 
@@ -100,8 +100,8 @@ class LLMyFrameALL extends JFrame implements ActionListener{
 		}	
 		if (target==b10){
 			t102.setText("SPARE"  );
-			// t102.setText(""+l.addAllAges()  );
-			//t102.setText(""+l.countOlder(Integer.parseInt(t101.getText())));
+//			t102.setText(""+l.addAllAges()  );
+//			t102.setText(""+l.countOlder(Integer.parseInt(t101.getText())));
 
 		}
 	}

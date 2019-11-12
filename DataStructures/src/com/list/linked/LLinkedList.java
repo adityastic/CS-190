@@ -73,7 +73,16 @@ class LLinkedList{
 	} 
 
 	public void insert_last(String s1,int a){    
-
+		if(head == null)
+			insert(s1,a);
+		else {
+			LLNode temp=head;
+			LLNode node =new LLNode(s1,a);
+			while(temp.next != null) {
+				temp=temp.next;
+			}  
+			temp.next=node;
+		}
 	}
 
 	public String delete_first(){         
@@ -93,6 +102,28 @@ class LLinkedList{
 		list+="NULL";  
 		return list; 
 
+	}
+
+	public int addAllAges() {
+		int res=0;
+		LLNode temp=head;
+		while(temp!=null) {
+			res+=temp.readage();
+			temp=temp.next;
+		}
+		return res; 
+	}
+
+	public int countOlder(int a) {
+		int cnt=0;
+		LLNode temp=head;
+		while(temp!=null) {
+			cnt++;
+			if(cnt == a)
+				return cnt;
+			temp=temp.next;
+		}
+		return 0; 
 	}
 }
 
