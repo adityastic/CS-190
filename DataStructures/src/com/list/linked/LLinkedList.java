@@ -52,6 +52,12 @@ class LLinkedList{
 
 	public  int count(String s1){     
 		int res=0;
+		LLNode temp=head;
+		while(temp!=null) {
+			if (temp.readname().equals(s1))
+				res++;
+			temp=temp.next;
+		}
 		return res; 
 	}  
 
