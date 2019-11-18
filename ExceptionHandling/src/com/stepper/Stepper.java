@@ -8,14 +8,16 @@ public class Stepper {
 	public void stepUp(){
 		this.value++; 
 	}
-	public void stepDown(){
+
+	public void stepDown() throws StepDownException{
 		if (value > 0) {
 			this.value--;
 		}
 		else {
-			
+			throw new StepDownException();
 		}
 	}
+
 	public int readValue(){
 		return this.value;
 	}
