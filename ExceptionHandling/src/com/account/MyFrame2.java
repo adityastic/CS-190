@@ -17,9 +17,9 @@ class MyFrame2 extends JFrame implements ActionListener{
 	private JLabel l3 = new JLabel("Message ");
 	private JTextField t5=new JTextField(" ",8);
 	private JPanel p1=new JPanel();
-	
+
 	private Account a =new Account(999123,   100,600);
-	
+
 	public MyFrame2(String s){
 		super(s);
 		Container content=getContentPane();
@@ -37,28 +37,28 @@ class MyFrame2 extends JFrame implements ActionListener{
 		content.add(p1);
 		b1.addActionListener(this);   
 		b2.addActionListener(this);  
- 
+
 		t1.setText("999123");t6.setText("600");
 		t2.setText(""+a.read_balance());
 		setSize(210,250);    setVisible(true);}
-	
-	public void actionPerformed(ActionEvent e){
-        
-	  	Object target=e.getSource();
-	  	t5.setText("");
-	 	if (target==b1){
-	          		int amt=Integer.parseInt(t3.getText());
-	          		boolean res =a.deposit(amt);
-	             	t2.setText(""+a.read_balance());
-	             	if (res==false)t5.setText("Exceeds Limit");
-	             }
-	 	if (target==b2){
-      		int amt=Integer.parseInt(t4.getText());
-      		boolean res= a.withdraw(amt);
-         	t2.setText(""+a.read_balance());
-         	if (res==false)t5.setText("Insuff Funds");
-         }
-	 	
-	 }
 
+	public void actionPerformed(ActionEvent e){
+
+		Object target=e.getSource();
+		t5.setText("");
+		try {
+			if (target==b1){
+				int amt=Integer.parseInt(t3.getText());
+				a.deposit(amt);
+				t2.setText(""+a.read_balance());
+			}
+			if (target==b2){
+				int amt=Integer.parseInt(t4.getText());
+				a.withdraw(amt);
+				t2.setText(""+a.read_balance());
+			}
+		}catch(DepositException | WithdrawException ex) {
+			t5.setText(ex.getMessage());
+		}
+	}
 }
