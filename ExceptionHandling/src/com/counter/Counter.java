@@ -1,19 +1,26 @@
 package com.counter;
-//package ch1;
 
 public class Counter {
 	private int value;
 	private int limit;
-    
+
 	public Counter(int lim){value=0;limit=lim;}
 
-	public boolean increment(){
-		if (value < limit) {this.value++; return true;}
-		else               { return false;}
+	public void increment() throws CounterException{
+		if (value < limit) {
+			this.value++;
+		}
+		else{
+			throw new CounterException("Cannot Increment, Limit Reached");
+		}
 	}
-	public boolean decrement(){
-		if (value > 0) {this.value--; return true;}
-		else               { return false;}
+	public void decrement() throws CounterException{
+		if (value > 0) {
+			this.value--; 
+		}
+		else{
+			throw new CounterException("Cannot Decrement, Limit Reached");
+		}
 	}
 	public int read_value(){
 		return this.value;
