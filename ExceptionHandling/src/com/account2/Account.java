@@ -6,16 +6,14 @@ class Account{
 	public void deposit(int amt){
 		this.balance += amt;
 	}
-	public int  withdraw(int amt){
-		int resultCode=0;
+	public void withdraw(int amt) throws MaxWithdrawException, InsuffFundsException{
 		if (amt>100){ 
-			resultCode=1;  
+			throw new MaxWithdrawException();
 		}else if (amt> balance){
-			resultCode=2; 
+			throw new InsuffFundsException();
 		}else{
 			balance -= amt;
 		}
-		return resultCode;
 	}
 	public int read_balance(){
 		return this.balance;
