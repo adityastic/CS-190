@@ -1,12 +1,10 @@
 package com.account;
 
 class Account{
-	private int number;
 	protected int balance;
 	private int upperLimit;
 
 	public Account(int n, int b,int l){
-		number=n;
 		balance=b;
 		upperLimit=l;
 	}
