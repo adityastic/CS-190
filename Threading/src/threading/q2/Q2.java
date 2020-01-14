@@ -4,8 +4,8 @@ public class Q2{
 	
     public static void main(String[] args){
          Incrementer  i = new Incrementer();                     
-         i.incrementer();
-         Decrementer d = new Decrementer();                  
-         d.decrementer();
+         new Thread(i).start();
+         Decrementer d = new Decrementer();         
+         new Thread(d).start();
     }
 }
