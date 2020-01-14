@@ -2,10 +2,10 @@ package threading.q4;
 
 import javax.swing.*;
 
-class DisplayCountUp{
+class DisplayCountUp extends Thread{
 	JLabel label;
 	DisplayCountUp(JLabel l){ this.label=l;}
-	public void display(){
+	public void run(){
 
 		for(int i=0;i<=20; i++){
 			this.label.setText("Counter Up:  "+i);

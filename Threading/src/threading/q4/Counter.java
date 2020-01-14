@@ -26,7 +26,7 @@ class Counter  {
         dcu= new DisplayCountUp(l1);
     	dcd= new DisplayCountDown(l2);
     	f1.setVisible(true);
-        dcu.display();
-        dcd.display();
+        dcu.start();
+        dcd.start();
     }
 } 
