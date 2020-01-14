@@ -6,7 +6,7 @@ public class Q1Skel
     {
 		Display d1=new Display("First");
 		Display d2=new Display("Second");
-		d1.display();
-		d2.display();
+		d1.start();
+		d2.start();
     }
 }
