@@ -4,7 +4,6 @@ import java.awt.*;
 import javax.swing.*;
 
 class Counter  {
-	private int counter=0;
 	private JFrame f1=new JFrame();
 	public  JLabel l1=new JLabel();
 	public  JLabel l2=new JLabel();
@@ -15,7 +14,6 @@ class Counter  {
 	DisplayCountDown dcd;
 	
 	Counter(){
-		counter=0;
 		content=f1.getContentPane();
 		l1.setFont(fnt);
 		l1.setText("Counter Up:  "+0);
