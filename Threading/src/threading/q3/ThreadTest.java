@@ -1,9 +1,9 @@
 package threading.q3;
 
-class ThreadTest {
+class ThreadTest extends Thread{
 	public ThreadTest() {}
 
-	public void writeY() {
+	public void run() {
 		while(true){
 			System.out.print("Y");
 			try {
