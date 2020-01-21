@@ -1,6 +1,5 @@
 package threading.q9;
 
-
 class Join3 extends Thread {
 	static int  counter=0;
 	static int delay=500;
