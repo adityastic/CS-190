@@ -10,7 +10,7 @@ class Producer extends Thread {
 			try{ 
 				store.insert(i);
 			} catch(Exception e){}
-			//System.out.println("Producer "+ " inserts : " + i);
+			System.out.println("Producer "+ " inserts : " + i);
 			try {
 				sleep((int)( Math.random()*10)); 
 			}catch (InterruptedException e) {}      
