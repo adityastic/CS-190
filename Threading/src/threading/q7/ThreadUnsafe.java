@@ -5,9 +5,9 @@ import java.util.concurrent.locks.ReentrantLock;
 
 class ThreadUnsafe extends Thread {
 	static int val1 = 9, val2 = 2, delay = 1000;
-
+	static Lock lock = new ReentrantLock();
+	
 	void Go(){
-		final Lock lock = new ReentrantLock();
 		lock.lock();
 		if (val2 != 0){
 			try {
@@ -29,9 +29,9 @@ class ThreadUnsafe extends Thread {
     	ThreadUnsafe t1=new ThreadUnsafe();
     	ThreadUnsafe t2=new ThreadUnsafe();
     	val1=9;
-    	val2=5;
+    	val2=2;
     	t1.start();
-    	delay=1000;
+    	delay=500;
     	t2.start();
     }
 }
