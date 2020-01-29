@@ -56,8 +56,21 @@ public class BSTree {
         }
     }
 
+    boolean searchInTree(Node root, int key) {
+    	
+    	if(root == null)
+    		return false;
+
+    	System.out.println("Current: " + root.key);
+    	
+    	if(root.key == key)
+    		return true;
+    	
+    	return searchInTree(root.left,key) || searchInTree(root.right,key);
+    }
+    
     String search(int key) {
-        return "Not Found";
+        return searchInTree(head,key) ? "Found" : "Not Found";
     }
 
     void visit(Node t) {
