@@ -27,10 +27,7 @@ class FrameQ4 extends JFrame implements ActionListener {
         int first = list.get(0);
         list.remove(0);
         
-        if(first == tar)
-        	return true;
-        
-        return searchTarget(list, tar);
+        return (first == tar) || searchTarget(list, tar);
     }
 
     public static boolean allOdd(ArrayList<Integer> list) {
