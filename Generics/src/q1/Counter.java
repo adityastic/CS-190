@@ -1,18 +1,17 @@
 package q1;
 
-class Counter
-{
-	private int value;
-	public Counter(int v1)
-	{
+class Counter<T>{
+	private T value;
+	
+	public Counter(T v1){
 		value = v1;
 	}
-	public int readValue()
-	{
+	
+	public T readValue(){
 		return value;
 	}
-	public void updateValue(int v1)
-	{
+	
+	public void updateValue(T v1){
 		value = v1;
 	}
 }
