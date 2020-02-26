@@ -7,7 +7,7 @@ public class TestStack {
 
     public static void main(String[] args) {
 
-        Stack < Node > l = new Stack < Node > ();
+        Stack<Node> l = new Stack<Node> ();
         Scanner sc = new Scanner(System.in);
 
         String name;
