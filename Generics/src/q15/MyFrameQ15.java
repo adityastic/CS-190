@@ -32,11 +32,7 @@ class MyFrameQ15 extends JFrame implements ActionListener {
     Map<Integer, String> list = new HashMap<Integer, String>();
 
     static String search(Map<Integer, String> map, Integer i) {
-    	for (Entry<Integer, String> item : map.entrySet()) {
-			if(item.getKey() == i)
-				return "Found";
-		}
-        return "Not Found";
+    	return map.get(i);
     }
     
     static void changeCity(Map<Integer, String> map, Integer i, String city) {
